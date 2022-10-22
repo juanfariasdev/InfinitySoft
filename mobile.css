@@ -43,7 +43,7 @@ h2 {
     .menu {
       display: grid;
       grid-template-columns: repeat(2, auto);
-      magin-left:1%;
+      magin-left:3%;
     }
 
     .button-header {
