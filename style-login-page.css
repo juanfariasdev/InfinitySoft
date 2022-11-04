@@ -1,133 +1,126 @@
 body {
-    background: linear-gradient(90deg, rgba(5,10,33,1) 0%,rgba(10,34,72) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(5, 10, 33, 1) 0%,
+    rgba(10, 34, 72) 100%
+  );
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
 }
 
 .content {
-    text-align: center;
-}
-#log-form {
-    height: 500px;
-    width: 450px;
-    position: absolute;
-    top: 10%;
-    left: 34%;
-    background-color: #0478aa1e;
-    border-radius: 10%;
-    box-shadow: 0 0 25px -1px rgb(10, 153, 219);
+  text-align: center;
+
+  height: 500px;
+  max-width: 450px;
+  width: 100%;
+
+  background-color: #0478aa1e;
+
+  border-radius: var(--padding);
+
+  box-shadow: 0 0 25px -1px rgb(10, 153, 219);
 }
 
-#log-form > ::placeholder {
-    color: white;
-    font-size: 18px;
-    font-weight: bolder;
+#div-logo {
+  margin-top: 10%;
+  margin-bottom: 8%;
 }
 
-#forget {
-    margin-left: -40%;
-    font-size: 20px;
-    color: #fff;
-    font-weight: bolder;
+#div-logo img {
+  width: 280px;
+  height: 160px;
+
+  border: solid 3px rgba(10, 153, 219, 0.041);
+  border-radius: var(--padding);
+}
+
+#div-logo img {
+  -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+#div-logo img:hover,
+#div-logo img:focus {
+  color: #fff;
+
+  outline: 0;
+  box-shadow: 0 0 25px 5px rgb(10, 153, 219);
+}
+
+.inputsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 0px 20px;
 }
 
 /* estilizando input */
-.log {
-    padding-left: 4em;
-    height: 35px;
-    width: 300px;
-    /* Estilizando a borda do input*/
-    border: none;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    /*  */
-    margin-bottom: 5%;
+.inputForm {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 
-    /* Retirando as bordas do input quando clicado */
-    box-shadow: 0 0 0 0;
-    outline: 0;
+  background-color: rgba(0, 255, 255, 0.137);
 
-    color: white;
-    font-size: 20px;
-}
-#login {
-    background: url("./icones/user.png") no-repeat left / 25px;
-    background-color: rgba(0, 255, 255, 0.137);
-    background-position: 6%;
-}
-#senha{
-    background: url("./icones/password.png") no-repeat left / 25px;
-    background-color: rgba(0, 255, 255, 0.137);
-    background-position: 6%;
-}
-#div-logo {
-    margin-top: 10%;
-    margin-bottom: 8%;
-}
-#logotipo {
-    width: 280px;
-    height: 160px;
-    border: solid 3px rgba(10, 153, 219, 0.041);
-    border-radius: 30%;
-}
-#btn-log {
-    background-color: rgb(10, 153, 219);
-    height: 40px;
-    width: 150px;
-    margin-right: -40%;
-    margin-top: -1%;
+  padding: 5px 15px;
+  height: 35px;
 
-    border-radius: 30px;
-    border: none;
-
-    color: rgba(10,34,72);
-    font-size: 18px;
-    font-weight: bolder;
+  border-radius: var(--padding);
 }
 
-#btn-log:hover, #btn-log:focus {
-    color: #fff;
-    outline: 0;
-  }
-  
-  #btn-log {
-    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-  }
-  #btn-log:hover {
-    box-shadow: 0 0 2px 2px rgb(10, 153, 219);
-  }
+.inputForm img {
+  width: 25px;
+  height: 25px;
+}
 
-  a:link{
-    text-decoration: none;
-    }
+.inputForm input {
+  background: transparent;
+  width: 100%;
 
-  a:hover{
-    text-decoration: underline;
-  }
-  a {
-    font-style: italic;
-  }
+  color: white;
+  font-size: 20px;
+}
 
-  #remember {
-    margin-top: 6.5%;
-    margin-right: -47%;
-    color: #fff;
-    font-size: 17px;
-    font-weight: bolder;
-  }
+.forgetSubmit {
+  display: flex;
+  justify-content: space-between;
+}
 
-  #logotipo {
-    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-  }
+#forget {
+  font-size: 20px;
+  color: #fff;
+}
 
-  #logotipo:hover{
-    box-shadow: 0 0 25px 5px rgb(10, 153, 219);
-  }
+.submitForm {
+  background-color: rgb(10, 153, 219);
+  height: 40px;
+  width: 150px;
 
-  #logotipo:hover, #logotipo:focus {
-    color: #fff;
-    outline: 0;
-  }
-  
+  border-radius: var(--padding);
+  border: none;
+
+  color: rgba(10, 34, 72);
+  font-size: 18px;
+  font-weight: bolder;
+
+  -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.submitForm:hover,
+.submitForm:focus {
+  color: #fff;
+
+  outline: 0;
+  cursor: pointer;
+
+  box-shadow: 0 0 2px 2px rgb(10, 153, 219);
+}
